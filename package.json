@@ -1,0 +1,15 @@
+{
+  "name": "abb_portofolio",
+  "version": "1.0.0",
+  "description": "web portofolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx tailwindcss -i src/tailwind.css -o views/css/style.css"
+  },
+  "author": "Ari Bayu Bastian",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.2.4"
+  }
+}
