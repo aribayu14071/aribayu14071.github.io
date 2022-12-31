@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- my css -->
-    <link rel="stylesheet" href="views/css/style.css">
+    <link rel="stylesheet" href="public/css/style.css">
     <script>
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
           document.documentElement.classList.add('dark');
@@ -14,6 +14,13 @@
           document.documentElement.classList.remove('dark');
         }
     </script>
+
+    <style>
+      #skill li{
+        width: 50%;
+        float: left;
+      }
+    </style>
     
     <title>My Portofolio</title>
 </head>
@@ -76,15 +83,15 @@
       <div class="flex flex-wrap">
         <div class="w-full self-center px-4 lg:w-1/2">
           <h1 class="text-base font-semibold text-blue-400 md:text-xl">Halo Semua 👋, saya <span class="mt-1 block text-4xl font-bold text-dark dark:text-white lg:text-5xl">Ari Bayu Bastian</span></h1>
-          <h2 class="mb-5 text-lg font-medium text-secondary lg:text-2xl">Programmer <span class="text-dark dark:text-white"></span></h2>
-          <p class="mb-10 font-medium leading-relaxed text-secondary">Belajar web programming itu mudah dan menyenangkan bukan. <span class="font-bold text-dark dark:text-white">bukan!</span></p>
+          <h2 class="mb-5 text-lg font-medium text-secondary lg:text-2xl">Programmer<span class="text-dark dark:text-white"></span></h2>
+          <p class="mb-10 font-medium leading-relaxed text-secondary">Saya adalah seorang web programmer, yang berspesialisasi dalam membangun dan terkadang merancang sebuah <span class="font-bold text-dark dark:text-white">website.</span></p>
   
           <a href="#contact" class="rounded-full bg-blue-500 py-3 px-8 text-base font-semibold text-white transition duration-300 ease-in-out hover:opacity-80 hover:shadow-lg">Hubungi Saya</a>
         </div>
         <div class="w-full self-end px-4 lg:w-1/2">
           <div class="relative mt-10 lg:right-0 lg:mt-9">
-            <img src="views/img/bayu.png" alt="Ari bayu bastian" class="relative z-10 mx-auto max-w-full" />
-            <span class="absolute bottom-0 left-1/2 -translate-x-1/2 md:scale-124">
+            <img src="public/img/bayu.png" alt="Ari bayu bastian" class="relative z-10 mx-auto max-w-full" />
+            <span class="absolute bottom-0 left-1/2 -translate-x-1/2 max-md:scale-124 max-sm:scale-50 max-sm:translate-y-52 max-lg:scale-125 max-lg:translate-y-12">
               <svg width="750" height="750" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                 <path
                   fill="#0F62FE"
@@ -104,8 +111,19 @@
       <div class="flex flex-wrap">
         <div class="mb-10 w-full px-4 lg:w-1/2">
           <h4 class="mb-3 text-lg font-bold uppercase text-blue-400">About Me</h4>
-          <h2 class="mb-5 max-w-md text-3xl font-bold text-dark dark:text-white lg:text-4xl">Yuk, belajar web programming di WPU!</h2>
-          <p class="max-w-xl text-base font-medium text-secondary lg:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id temporibus maiores sequi vitae saepe iusto deleniti!</p>
+          <h2 class="mb-5 max-w-md text-3xl font-bold text-dark dark:text-white lg:text-4xl">Yuk, berkenalan dengan saya!</h2>
+          <p class="max-w-xl text-base font-medium text-secondary lg:text-lg">Hallo! Nama saya Ari Bayu Bastian saya senang dalam membuat sesuatu yang menarik, ketertarikan saya pada pengembangan web dimulai pada tahun 2015 ketika saya masuk jenjang kuliah, dan saya menikmati pada saat mempelajari HTML & CSS!</p>
+          <p class="max-w-xl text-base font-medium text-secondary lg:text-lg mt-2">Berikut adalah beberapa teknologi yang telah saya gunakan baru-baru ini :</p>
+          <ul class="text-secondary lg:text-lg" id="skill">
+            <li>&#187; Javascript (ES6+)</li>
+            <li>&#187; PHP</li>
+            <li>&#187; Node.js</li>
+            <li>&#187; CodeIgniter</li>
+            <li>&#187; Laravel</li>
+            <li>&#187; Tailwindcss</li>
+            <li>&#187; Bootstrap</li>
+            <li>&#187; Express</li>
+          </ul>
         </div>
         <div class="w-full px-4 lg:w-1/2">
           <h3 class="mb-4 text-2xl font-semibold text-dark dark:text-white lg:pt-10 lg:text-3xl">Mari berteman</h3>
@@ -116,7 +134,7 @@
   
             <!-- Instagram -->
             <a
-              href=""
+              href="https://www.instagram.com/ari.bayu1407/"
               target="_blank"
               class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-blue-400 hover:bg-blue-400 hover:text-white"
             >
@@ -130,7 +148,7 @@
   
             <!-- Twitter -->
             <a
-              href=""
+              href="https://twitter.com/"
               target="_blank"
               class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-blue-400 hover:bg-blue-400 hover:text-white"
             >
@@ -144,7 +162,7 @@
   
             <!-- LinkedIn -->
             <a
-              href=""
+              href="https://linkedin.com/in/ari-bayu-bastian-a492aa184"
               target="_blank"
               class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-blue-400 hover:bg-blue-400 hover:text-white"
             >
@@ -262,13 +280,10 @@
           <h3 class="mb-5 text-xl font-semibold text-white">Kategori Tulisan</h3>
           <ul class="text-slate-300">
             <li>
-              <a href="#" class="mb-3 inline-block text-base hover:text-blue-400">Programming</a>
+              <a href="#about" class="mb-3 inline-block text-base hover:text-blue-400">Programming</a>
             </li>
             <li>
-              <a href="#" class="mb-3 inline-block text-base hover:text-blue-400">Teknologi</a>
-            </li>
-            <li>
-              <a href="#" class="mb-3 inline-block text-base hover:text-blue-400">Gaya Hidup</a>
+              <a href="#about" class="mb-3 inline-block text-base hover:text-blue-400">Teknologi</a>
             </li>
           </ul>
         </div>
@@ -296,7 +311,7 @@
 
           <!-- Instagram -->
           <a
-            href="https://instagram.com/sandhikagalih"
+            href="https://www.instagram.com/ari.bayu1407/"
             target="_blank"
             class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-blue-400 hover:bg-blue-400 hover:text-white"
           >
@@ -310,7 +325,7 @@
 
           <!-- Twitter -->
           <a
-            href="https://twitter.com/sandhikagalih"
+            href="https://twitter.com/"
             target="_blank"
             class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-blue-400 hover:bg-blue-400 hover:text-white"
           >
@@ -324,7 +339,7 @@
           
           <!-- LinkedIn -->
           <a
-            href="https://linkedin.com/in/sandhikagalih"
+            href="https://linkedin.com/in/ari-bayu-bastian-a492aa184"
             target="_blank"
             class="mr-3 flex h-9 w-9 items-center justify-center rounded-full border border-slate-300 text-slate-300 hover:border-blue-400 hover:bg-blue-400 hover:text-white"
           >
@@ -337,7 +352,7 @@
           </a>
         </div>
         <p class="text-center text-xs font-medium text-slate-500">
-          Dibuat oleh <a href="https://www.instagram.com/ari.bayu1407/"" target="_blank" class="font-bold text-blue-400">Ari Bayu Bastian</a>, menggunakan
+          Dibuat oleh <a href="https://www.instagram.com/ari.bayu1407/" target="_blank" class="font-bold text-blue-400">Ari Bayu Bastian</a>, menggunakan
           <a href="https://tailwindcss.com" target="_blank" class="font-bold text-sky-500">Tailwind CSS</a>.<span id="date"></span>
         </p>
       </div>
@@ -351,7 +366,7 @@
   </a>
   <!-- Back to top End -->
 
-  <script src="views/js/script.js"></script>
+  <script src="public/js/script.js"></script>
   <script>
     n =  new Date();
     y = n.getFullYear();
