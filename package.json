@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx tailwindcss -i src/tailwind.css -o public/css/style.css"
+    "dev": "npx tailwindcss -i src/tailwind.css -o public/css/style.css --minify"
   },
   "author": "Ari Bayu Bastian",
   "license": "ISC",
